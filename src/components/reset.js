@@ -61,6 +61,7 @@ export const Reset = createGlobalStyle`
     color: #444;
     font-size: 1.4rem;
     line-height: 1;
+    overflow-x: hidden;
   }
 
   ol, ul {
@@ -88,5 +89,13 @@ export const Reset = createGlobalStyle`
   svg {
     vertical-align: top;
     fill: currentColor;
+  }
+
+  a {
+    color: #441EF7;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 `;

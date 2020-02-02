@@ -57,7 +57,11 @@ const Nav = styled(MobileTakeOver)`
   `}
 `;
 
-const NavLink = styled.a`
+const NavLink = styled.a.attrs({
+  target: "_blank",
+  rel: "noopener"
+})`
+  color: #444;
   display: block;
   font-weight: 500;
   padding: 0.8rem 1.6rem;
@@ -71,7 +75,7 @@ const NavLink = styled.a`
   `}
 `;
 
-const Header = ({ siteTitle }) => (
+const Header = () => (
   <HeaderWrapper>
     <HeaderContainer>
       <Logo>
@@ -81,22 +85,32 @@ const Header = ({ siteTitle }) => (
       <Nav Icon={MdMenu}>
         <ul>
           <li>
-            <NavLink href="https://www.meetup.com/DenverScript/" target="_blank" rel="noopener">
+            <NavLink href="https://www.meetup.com/DenverScript">
               Meetup
             </NavLink>
           </li>
           <li>
-            <NavLink href="https://www.meetup.com/DenverScript/" target="_blank" rel="noopener">
+            <NavLink href="http://www.meetup.com/DenverScript/pages/Code_of_Conduct">
+              Code of Conduct
+            </NavLink>
+          </li>
+          <li>
+            <NavLink href="https://opencollective.com/denverscript">
               Open Collective
             </NavLink>
           </li>
           <li>
-            <NavLink href="https://www.youtube.com/channel/UCIatzpIjlgtFsGofeZSdVLQ/videos" target="_blank" rel="noopener">
+            <NavLink href="https://twitter.com/denverscript">
+              Twitter
+            </NavLink>
+          </li>
+          <li>
+            <NavLink href="https://www.youtube.com/channel/UCIatzpIjlgtFsGofeZSdVLQ/videos">
               Youtube
             </NavLink>
           </li>
           <li>
-            <NavLink href="http://bit.ly/ds-talk" target="_blank" rel="noopener">
+            <NavLink href="http://bit.ly/ds-talk">
               Submit a talk
             </NavLink>
           </li>
