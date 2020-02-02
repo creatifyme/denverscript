@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import { useWindowWidth } from './useWindowWith';
+import { useWindowWidth } from './useWindowWidth';
 import { breakpoint } from './breakpoints';
 import { MdClose } from 'react-icons/md';
 import { colors } from './colors';
@@ -64,7 +64,7 @@ const MobileTakeOver = ({
   children,
   className,
 }) => {
-  const windowChanged = useWindowWidth();
+  const windowChanged = typeof window !== 'undefined' ? useWindowWidth() : false;
   const [isOpen, setIsOpen] = useState(false);
   const toggleTakeOver = () => {
     document.body.classList.toggle('takeover-active');
